@@ -10,7 +10,7 @@ public class Day1 {
         String[] eachInput;
 
 
-        File myObj = new File("src/day1input.txt");
+        File myObj = new File("aoc2023/src/day1input.txt");
         Scanner myReader = new Scanner(myObj);
 
         while (myReader.hasNext()) {
