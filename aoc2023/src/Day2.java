@@ -7,24 +7,19 @@ public class Day2 {
     public static void main(String[] args) throws FileNotFoundException{
 
         long start = System.nanoTime();
-
         String data = "";
         String[] eachInput;
-
         File myObj = new File("aoc2023/src/day2input.txt");
         Scanner myReader = new Scanner(myObj);
 
         while (myReader.hasNextLine()) {
             data = data + myReader.nextLine() + "\n";
         }
-
         myReader.close();
-      
         eachInput = data.split("\n");
 
         int idTotal = 0;
         int totalPower = 0;
-
         int maxRed = 12;
         int maxGreen = 13;
         int maxBlue = 14;
@@ -34,7 +29,6 @@ public class Day2 {
             int biggestGreen = 0;
             int biggestBlue = 0;
             int biggestRed = 0;
-
             String input = eachInput[i].split(":")[1]; // Remove the Game X:
             boolean inputValid = true;
             System.out.println("Analyzing game " + i + ": " + input);
