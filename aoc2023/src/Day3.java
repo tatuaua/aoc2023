@@ -41,28 +41,13 @@ public class Day3 {
 
                 if(Character.isDigit(array[k][x])){
 
-                    for(int y = k-1; y >= 0; y--){ // When we find a number, start looping up the arrays within the same X axis
+                    if(array[k-1][x-1] != '.' && !Character.isDigit(array[k-1][x-1]) || 
+                    array[k][x-1] != '.' && !Character.isDigit(array[k][x-1]) ||
+                    array[k+1][x-1] != '.' && !Character.isDigit(array[k+1][x-1]) ||
+                    array[k-1][x] != '.' && !Character.isDigit(array[k-1][x]) ||
+                    array[k-1][x+1] != '.' && !Character.isDigit(array[k-1][x+1])
+                    ){
 
-                        if(Character.isDigit(array[k][x])){
-                            break;
-                        }
-
-                        if(array[y][x] != '.' && !Character.isDigit(array[y][x])){
-
-                            enginePart += array[y][x];
-                            isEnginePart = true;
-                            break;
-                        }
-                    }
-
-                    for(int y = k+1; y < array.length-1; y++){ // Same thing but down
-
-                        if(array[y][x] != '.' && !Character.isDigit(array[y][x]) && !isEnginePart){
-
-                            enginePart += array[k][x];
-                            isEnginePart = true;
-                            break;
-                        }
                     }
                 }
 
