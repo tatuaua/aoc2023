@@ -1,6 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Day3 {
@@ -36,7 +35,7 @@ public class Day3 {
             
             for(int x = 0; x < array[0].length; x++){ // Loops through current array
 
-                String enginePart = "";
+                //String enginePart = "";
                 boolean isEnginePart = false;
 
                 if(Character.isDigit(array[k][x])){
